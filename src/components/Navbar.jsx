@@ -29,7 +29,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Links (hidden on mobile) */}
-          <div className="hidden md:flex gap-4">
+          <div className="hidden md:flex gap-2 flexwrap">
             <NavLink to="/action" className={navLinkClass('text-yellow-400')}>
               Action
             </NavLink>
