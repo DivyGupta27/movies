@@ -92,7 +92,7 @@ const Navbar = () => {
 
         {/* Mobile Menu (Dropdown) */}
         {isMenuOpen && (
-          <div className="md:hidden pb-3 space-y-1">
+          <div className="md:hidden pb-3 flex flex-wrap space-y-1">
             <NavLink
               to="/action"
               className={navLinkClass('text-yellow-400')}
@@ -130,7 +130,7 @@ const Navbar = () => {
             </NavLink>
 
             {/* Mobile Search */}
-            <div className="mt-2 px-2">
+            <div className="mt-2 px-2 text-purple-600">
               <input
                 type="text"
                 placeholder="Search movies..."

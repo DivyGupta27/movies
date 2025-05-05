@@ -7,9 +7,9 @@ const MovieCard = ({ movie }) => {
     navigate(`/movie/${movie.imdbID}`);
   };
   return (
-    <div className='flex justify-center pt-5 'onClick={handleClick}>
+    <div className='flex flex-wrap justify-center pt-5 'onClick={handleClick}>
 
-    <div className="flex-wrap w-60 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+    <div className=" w-60 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
       <img
         src={movie.Poster !== "N/A" ? movie.Poster : "https://img.freepik.com/premium-photo/vertical-image-404-error-floating-window-green-stage-internet-connection-problem_551230-895.jpg?ga=GA1.1.47276942.1743000520&semt=ais_hybrid&w=740"}
         alt={movie.Title}
