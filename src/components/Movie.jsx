@@ -14,6 +14,7 @@ const Movie = ({type}) => {
       try {
         let res = await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=40d5ad0f&type=movie&page=${mypage}`);
         const json = await res.json();
+        console.log(json)
         if (json.Search) {
           setMovies(json.Search);
         } else {

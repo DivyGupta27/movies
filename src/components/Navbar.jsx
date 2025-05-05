@@ -133,9 +133,11 @@ const Navbar = () => {
             <div className="mt-2 px-2">
               <input
                 type="text"
-                // onChange={}
                 placeholder="Search movies..."
                 className="w-full px-3 py-2 rounded-md text-purple-500 focus:outline-none"
+                value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               />
             </div>
           </div>

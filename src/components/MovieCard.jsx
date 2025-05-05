@@ -14,6 +14,10 @@ const MovieCard = ({ movie }) => {
         src={movie.Poster !== "N/A" ? movie.Poster : "https://img.freepik.com/premium-photo/vertical-image-404-error-floating-window-green-stage-internet-connection-problem_551230-895.jpg?ga=GA1.1.47276942.1743000520&semt=ais_hybrid&w=740"}
         alt={movie.Title}
         className="w-full h-72 object-cover"
+        onError={(e) => {
+          // e.target.onerror = null;
+          e.target.src = "https://img.freepik.com/premium-photo/vertical-image-404-error-floating-window-green-stage-internet-connection-problem_551230-895.jpg?ga=GA1.1.47276942.1743000520&semt=ais_hybrid&w=740";
+        }}
       />
       <div className="p-4">
         <h2 className="text-xl font-bold truncate mb-1">{movie.Title}</h2>
